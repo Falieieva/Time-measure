@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Time measure</title>
+  </head>
+
+  <body>
+    <h1>Розрахунок проміжку часу</h1>
+    <form>
+      <div class="selection">
+        <label>Дата початку:</label>
+        <input type="date" id="start_date"> <br>
+        <label>Дата кінця:</label>
+        <input type="date" id="end_date" min=" ">
+      </div>
+      
+      <div class="button">
+        <button type="button" class="week">Тиждень</button> <br>
+        <button type="button" class="month">Місяць</button>
+      </div>
+  
+      <div class="selection">
+        <label>Дні тижня:</label>
+        <select id="day_type">
+          <option value="all">Всі дні</option>
+          <option value="businessdays">Будні дні</option>
+          <option value="weekends">Вихідні дні</option> 
+        </select> <br>
+
+        <label>Одиниці часу:</label>
+        <select id="time_unit">
+          <option value="days">Дні</option>
+          <option value="hours">Години</option>
+          <option value="minutes">Хвилини</option>
+          <option value="seconds">Секунди</option> 
+        </select>
+      </div>
+
+      <button type="button" class="calculate">Розрахувати</button>
+      
+      <span id="result"></span>
+    
+    </form>
+
+    <h3>Останні результати</h2>
+    <table id="results_table">
+      <tr>
+        <th>Дата початку</th>
+        <th>Дата кінця</th>
+        <th>Результат</th>
+      </tr>
+    </table>
+
+    <script src="index.js"></script>
+  </body>
+</html>

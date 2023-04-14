@@ -1,0 +1,134 @@
+body {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin: 30px 0;
+}
+  
+form {
+    display: block;
+}
+
+.selection, .button{
+    display: flex;
+    justify-content: space-around;
+}
+
+label {
+    margin-bottom: 10px;
+    margin-right: 20px;
+    padding: 10px;
+}
+  
+input, select {
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+  
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M4 5L0 1h8L4 5z"/></svg>') no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    padding-right: 30px;
+    width: 22%;
+}
+  
+button {
+    width: 250px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border: none;
+    color: #000000;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+button:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.calculate{
+    background-color: #3b93f7;
+    display: block;
+    margin: 50px auto 30px auto;
+    padding: 20px 20px;
+    font-size: 16px;
+}
+
+.calculate:hover {
+    background-color: #194eff;
+}
+
+h3{
+    margin-top: 30px;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+  
+#results_table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#results_table th, #results_table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+  
+#results_table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+@media screen and (max-width: 650px){
+    .selection, .button{
+        display: block;
+        text-align: center;
+    }
+    select {
+        width: auto;
+    }
+}
+@media screen and (max-width: 465px){
+    h1{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width: 340px){
+    h1{
+        font-size: 22px;
+    }
+    .selection, .button{
+        display: block;
+        text-align: center;
+    }
+    input, select {
+        margin-right: 5px;
+    }
+    label {
+        margin-right: 5px;
+    }
+}
+
+
