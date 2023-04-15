@@ -94,6 +94,20 @@ function insertDataIntoTable(startDate, endDate, result, unit) {
   resultCell.textContent = `${result} ${unit}`;
 }
 
+function loadSavedCalculations() {
+   const calculations = getSavedCalculationResults();
+
+   for (let i = 0; i < calculations.length; i++) {
+     insertDataIntoTable(
+     new Date(calculations[i].startDate),
+     new Date(calculations[i].endDate),
+     calculations[i].result,
+     calculations[i].unit);
+    }
+}
+
+loadSavedCalculations();
+
 function calculate() {
   const startDate = new Date(document.getElementById("start_date").value);
   const endDate = new Date(document.getElementById("end_date").value);
